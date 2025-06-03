@@ -3,7 +3,7 @@ import styles from '@/styles/Home.module.css';
 import PetCard from '../components/PetCard';
 
 
-
+// list of adoptable pets
 const pets = [
   { name: 'Neko', type: 'Cat', image: '/neko.jpg' },
   { name: 'Usagi', type: 'Bunny', image: '/usagi.webp' },
@@ -11,11 +11,11 @@ const pets = [
 ];
 
 export default function Adopt() {
-  const router = useRouter();
+  const router = useRouter(); 
 
   const adoptPet = (pet) => {
-    localStorage.setItem('adoptedPet', JSON.stringify(pet));
-    router.push('/pet');
+    localStorage.setItem('adoptedPet', JSON.stringify(pet)); //saving of pet data in localStorage
+    router.push('/pet'); //nav to pet page
   };
 
   return (

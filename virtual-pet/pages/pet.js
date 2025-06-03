@@ -6,14 +6,16 @@ export default function Pet() {
   const [mood, setMood] = useState('happy');
 
   useEffect(() => {
-    const petData = JSON.parse(localStorage.getItem('adoptedPet'));
-    if (petData) setPet(petData);
+    const petData = JSON.parse(localStorage.getItem('adoptedPet')); // retrieve pet data from adopted page
+    if (petData) setPet(petData); //update pet mod
   }, []);
 
+  // function to update pets mood
   const updateMood = (newMood) => {
     setMood(newMood);
   };
 
+  // loadind message
   if (!pet) {
     return (
       <div className={styles.page}>

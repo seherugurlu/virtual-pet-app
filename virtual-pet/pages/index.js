@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css"; 
 
+// Homepage component: displays short welcome message and navigation button to adopt page
 export default function Home() {
   return (
     <>
